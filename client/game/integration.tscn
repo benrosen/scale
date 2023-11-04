@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwei2xyodq2sf"]
+
+[ext_resource type="PackedScene" uid="uid://b3a5ym1lnnc3r" path="res://environment.tscn" id="1_61u4s"]
+[ext_resource type="PackedScene" uid="uid://cc42yx113n7a6" path="res://sun.tscn" id="2_tnu0e"]
+[ext_resource type="PackedScene" uid="uid://boqrkecg6ddsw" path="res://camera.tscn" id="3_ftgn3"]
+
+[node name="integration" type="Node3D"]
+
+[node name="environment" parent="." instance=ExtResource("1_61u4s")]
+
+[node name="sun" parent="." instance=ExtResource("2_tnu0e")]
+
+[node name="camera" parent="." instance=ExtResource("3_ftgn3")]
