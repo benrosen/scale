@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c76p6ypj0t8kf"
+path="res://.godot/imported/mask_screen.obj-ade91192063b9c9d1627a7af22aaaa1f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mask_screen.obj-ade91192063b9c9d1627a7af22aaaa1f.mesh"]
+
+source_file="res://mask_screen.obj"
+dest_files=["res://.godot/imported/mask_screen.obj-ade91192063b9c9d1627a7af22aaaa1f.mesh", "res://.godot/imported/mask_screen.obj-ade91192063b9c9d1627a7af22aaaa1f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
