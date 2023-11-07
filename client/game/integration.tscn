@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwei2xyodq2sf"]
+[gd_scene load_steps=7 format=3 uid="uid://cwei2xyodq2sf"]
 
 [ext_resource type="PackedScene" uid="uid://b3a5ym1lnnc3r" path="res://environment.tscn" id="1_61u4s"]
 [ext_resource type="PackedScene" uid="uid://cc42yx113n7a6" path="res://sun.tscn" id="2_tnu0e"]
 [ext_resource type="PackedScene" uid="uid://boqrkecg6ddsw" path="res://camera.tscn" id="3_ftgn3"]
 [ext_resource type="PackedScene" uid="uid://cuherogo4k2r7" path="res://avatar.tscn" id="4_f764a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_81igc"]
+size = Vector3(7.51603, 1, 5.10701)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h88s4"]
 
 [node name="integration" type="Node3D"]
 
@@ -15,4 +20,15 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.5)
 
 [node name="avatar" parent="." instance=ExtResource("4_f764a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0784054, 0.909389, -0.0881069)
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(60, 0, 0, 0, 2, 0, 0, 0, 60, 0, 0, 0)
+shape = SubResource("BoxShape3D_81igc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(60, 0, 0, 0, 2, 0, 0, 0, 60, 0, 0, 0)
+mesh = SubResource("BoxMesh_h88s4")
